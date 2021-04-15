@@ -10,10 +10,16 @@ public class Code01_PrintB {
 //        print(test<<1);
 //        print(test<<2);
 //        print(test<<8);
-        int a = 4;
-        //取反
-        print(~a);
+//        int a = 4;
+//        //取反
+//        print(~a);
 
+        int a = Integer.MIN_VALUE;
+        print(a);
+        //带符号右移
+        print(a >> 1);
+        //不带符号右移
+        print(a >>> 1);
 
     }
 
