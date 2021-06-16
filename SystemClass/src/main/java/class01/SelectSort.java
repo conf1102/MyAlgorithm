@@ -2,6 +2,8 @@ package class01;
 
 import util.Util;
 
+import java.util.Arrays;
+
 public class SelectSort {
 
     //将一个无序数组排序，算法如下
@@ -28,10 +30,20 @@ public class SelectSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {3, 4, 1, 5, 2, 8, 9};
-        sort(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        int testTime = 10000;
+        int length = 100;
+        int maxValue = 100;
+        for (int i = 0; i < testTime; i++) {
+            int[] arr = Util.generateRandomTestArr(length, maxValue);
+            int[] ootbArr = Util.copyArr(arr);
+            sort(arr);
+            Arrays.sort(ootbArr);
+            for (int j = 0; j < arr.length; j++) {
+                if(arr[j] != ootbArr[j]){
+                    System.out.println("Error Happened");
+                }
+            }
         }
+        System.out.println("Good!!");
     }
 }
