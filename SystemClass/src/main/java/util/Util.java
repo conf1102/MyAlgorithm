@@ -14,7 +14,9 @@ public class Util {
         //(int)(Math.random() * N)  [0, N-1]
         int[] intArr = new int[length];
         for (int i = 0; i < intArr.length; i++) {
-            int randomValue = (int) ((Math.random()) * maxValue) + (int) ((Math.random() - 1) * maxValue);
+//            包含负值的随机数
+//            int randomValue = (int) ((Math.random()) * maxValue) + (int) ((Math.random() - 1) * maxValue);
+            int randomValue = (int) ((Math.random()) * maxValue);
             intArr[i] = randomValue;
         }
         return intArr;
