@@ -12,7 +12,7 @@ public class Util {
         //Math.random() [0,1)
         //Math.random() * N  [0,N)
         //(int)(Math.random() * N)  [0, N-1]
-        int[] intArr = new int[length];
+        int[] intArr = new int[(int)(Math.random() * length)];
         for (int i = 0; i < intArr.length; i++) {
 //            包含负值的随机数
 //            int randomValue = (int) ((Math.random()) * maxValue) + (int) ((Math.random() - 1) * maxValue);
